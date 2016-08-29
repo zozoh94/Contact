@@ -1,7 +1,9 @@
 # Contact
 This form contact need PHPMailer and toastr.
+
 HTML form example to work with (in jade):
 
+```jade
 .content-section-a#contact
   .container
     .row
