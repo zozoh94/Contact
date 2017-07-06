@@ -22,10 +22,11 @@ $(document).ready(function() {
        success: function() {
 	 toastr.success("Demande de contact envoyé.");
        },
-       error: function(json) {
+       error: function(res) {
+	 var errors = res.responseJSON.errors;
 	 toastr.error("Erreur lors de l'envoi de la demande de contact.");
-	 for(error in json.errors)
-	   toastr.warning(error);
+	 for(error in errors)
+	   toastr.warning(errors[error]);
        }
      });
   });
