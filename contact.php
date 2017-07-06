@@ -71,7 +71,7 @@ $mail = new PHPMailer;
 $mail->SetFrom($email, 'Expéditeur');
 $mail->Subject = 'Demande de contact de '.$prenom.' '.$nom;
 $mail->Body = $message;
-$mail->AddAddress('contact@afterworkdigitaldetox.fr');
+$mail->AddAddress('contact@test.fr');
 if(!$mail->send()) {
     http_response_code(400);
     $response['errors'][] = "Echec de l'envoi : réessayer plus tard.";
